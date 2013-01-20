@@ -1,0 +1,25 @@
+CREATE TABLE `articles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `number` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `category` int(11) NOT NULL,
+  `descr` text,
+  `color` varchar(20) NOT NULL,
+  `price` double(15,3) NOT NULL,
+  `front_image` longblob,
+  `front_thumbnail` mediumblob,
+  `back_image` longblob,
+  `back_thumbnail` mediumblob,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=72 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
